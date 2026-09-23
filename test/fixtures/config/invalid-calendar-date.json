@@ -1,0 +1,12 @@
+{
+  "level": "moderate",
+  "ignore": [
+    {
+      "ghsa": "GHSA-1111-2222-3333",
+      "package": "some-package",
+      "reason": "Invalid date for test coverage",
+      "expires": "2026-02-30",
+      "active": true
+    }
+  ]
+}

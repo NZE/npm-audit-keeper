@@ -1,0 +1,11 @@
+{
+  "level": "moderate",
+  "ignore": [
+    {
+      "ghsa": "GHSA-3ppc-4f35-3m26",
+      "package": "minimatch",
+      "reason": "Active omitted should default to true.",
+      "expires": "2099-01-01"
+    }
+  ]
+}

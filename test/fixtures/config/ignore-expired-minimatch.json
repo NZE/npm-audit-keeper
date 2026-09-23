@@ -1,0 +1,12 @@
+{
+  "level": "moderate",
+  "ignore": [
+    {
+      "ghsa": "GHSA-3ppc-4f35-3m26",
+      "package": "minimatch",
+      "reason": "This waiver is intentionally expired for test coverage.",
+      "expires": "2000-01-01",
+      "active": true
+    }
+  ]
+}

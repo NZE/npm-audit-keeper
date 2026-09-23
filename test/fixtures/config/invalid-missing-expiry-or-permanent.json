@@ -1,0 +1,10 @@
+{
+  "level": "moderate",
+  "ignore": [
+    {
+      "ghsa": "GHSA-3ppc-4f35-3m26",
+      "package": "minimatch",
+      "reason": "Missing both expires and permanent."
+    }
+  ]
+}

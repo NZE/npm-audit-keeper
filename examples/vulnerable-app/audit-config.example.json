@@ -1,0 +1,12 @@
+{
+  "level": "moderate",
+  "ignore": [
+    {
+      "ghsa": "GHSA-xxxx-xxxx-xxxx",
+      "package": "example-package",
+      "reason": "Example entry for local demo only.",
+      "expires": "2099-01-01",
+      "active": false
+    }
+  ]
+}

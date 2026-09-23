@@ -1,0 +1,12 @@
+{
+  "level": "moderate",
+  "ignore": [
+    {
+      "ghsa": "GHSA-ffff-ffff-ffff",
+      "package": "unused-package",
+      "reason": "Synthetic entry for unused-ignore warning test.",
+      "expires": "2099-01-01",
+      "active": true
+    }
+  ]
+}

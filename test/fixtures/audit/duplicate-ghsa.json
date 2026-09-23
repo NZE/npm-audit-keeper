@@ -1,0 +1,41 @@
+{
+  "auditReportVersion": 2,
+  "vulnerabilities": {
+    "package-a": {
+      "name": "package-a",
+      "severity": "moderate",
+      "via": [
+        {
+          "source": 2000001,
+          "name": "ajv",
+          "dependency": "ajv",
+          "title": "Same advisory through path A",
+          "url": "https://github.com/advisories/GHSA-2g4f-4pwh-qvx6",
+          "severity": "moderate",
+          "range": "<8.17.1"
+        }
+      ],
+      "effects": [],
+      "isDirect": false,
+      "fixAvailable": false
+    },
+    "package-b": {
+      "name": "package-b",
+      "severity": "moderate",
+      "via": [
+        {
+          "source": 2000002,
+          "name": "ajv",
+          "dependency": "ajv",
+          "title": "Same advisory through path B",
+          "url": "https://github.com/advisories/GHSA-2g4f-4pwh-qvx6",
+          "severity": "moderate",
+          "range": "<8.17.1"
+        }
+      ],
+      "effects": [],
+      "isDirect": false,
+      "fixAvailable": false
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "auditReportVersion": 2,
+  "vulnerabilities": {
+    "mystery-package": {
+      "name": "mystery-package",
+      "severity": "high",
+      "via": [
+        {
+          "source": 77777,
+          "name": "mystery-package",
+          "dependency": "mystery-package",
+          "title": "Advisory without GHSA URL",
+          "url": "https://example.com/security/advisories/77777",
+          "severity": "high",
+          "range": "*"
+        }
+      ],
+      "effects": [],
+      "isDirect": false,
+      "fixAvailable": false
+    }
+  }
+}

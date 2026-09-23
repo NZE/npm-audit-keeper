@@ -1,0 +1,10 @@
+{
+  "name": "npm-audit-keeper-demo-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local demo app for npm-audit-keeper interactive mode",
+  "devDependencies": {
+    "lodash": "4.17.20",
+    "minimist": "0.0.8"
+  }
+}
