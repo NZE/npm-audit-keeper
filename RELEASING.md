@@ -2,11 +2,7 @@
 
 ## First public release
 
-- Review the source tree, then make the GitHub repository public. The package is MIT-licensed and its first public version is `npm-audit-keeper@1.0.0`.
-- Confirm the package name is available on npm and sign in to an npm account with two-factor authentication.
-- Run the checks below on a clean `main` commit and confirm the GitHub CI matrix passed for that commit.
-- Publish the first version interactively with `npm publish --registry=https://registry.npmjs.org/`. A new package cannot be staged or configured with a trusted publisher until it exists on npm.
-- Verify the published package metadata and install both CLI aliases from the public registry. Tag the published commit as `v1.0.0` and create the matching GitHub Release.
+`npm-audit-keeper@1.0.0` was published interactively from commit `84c9795` after the GitHub CI matrix passed. The package is public on [npm](https://www.npmjs.com/package/npm-audit-keeper), and the matching [GitHub release](https://github.com/NZE/npm-audit-keeper/releases/tag/v1.0.0) points to that commit. This bootstrap was necessary because a new package cannot be staged or configured with a trusted publisher until it exists on npm.
 
 ## Verify the package
 
@@ -26,7 +22,7 @@ The GitHub CI matrix must pass before release. Local Windows checks do not subst
 
 ## Later releases
 
-After the first version exists, configure npm trusted publishing for GitHub user `NZE`, repository `npm-audit-keeper`, and workflow file `publish.yml`. Allow staged publishing only. The workflow runs on a version tag, validates that the tag matches `package.json` and points into `main`, repeats the checks above, then stages the package using GitHub Actions OIDC. No npm publish token is stored in GitHub.
+The trusted publisher is GitHub user `NZE`, repository `npm-audit-keeper`, and workflow file `publish.yml`, with staged publishing permission only. Pushing a version tag runs the workflow, validates that the tag matches `package.json` and points into `main`, repeats the checks above, then stages the package using GitHub Actions OIDC. No npm publish token is stored in GitHub.
 
 For each release, commit a version bump to `main` with its lockfile, wait for CI, then tag that exact commit as `v<version>` and push the tag. Review the staged package on npm and approve it with two-factor authentication. Create the GitHub Release after npm confirms publication. A package version cannot be reused once published.
 

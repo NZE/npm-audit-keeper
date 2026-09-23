@@ -12,13 +12,13 @@ The CLI runs `npm audit --json` in your current directory, reports advisories at
 - npm must be available on `PATH`, with access to the registry configured for the project being audited.
 - Run from an npm project with a `package-lock.json` or `npm-shrinkwrap.json`. The supported audit response is npm's `auditReportVersion: 2` format.
 
-After publication to npm, install with:
+Install from [npm](https://www.npmjs.com/package/npm-audit-keeper) with:
 
 ```bash
 npm install --save-dev npm-audit-keeper
 ```
 
-The package is not published to the public npm registry yet. See [release preparation](RELEASING.md) for the remaining steps.
+The public package is MIT-licensed. See [RELEASING.md](RELEASING.md) for the release process.
 
 ## Quick start
 
@@ -236,7 +236,7 @@ The GitHub CI workflow runs these checks on Windows and Linux with Node 22.12 an
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for change validation and [RELEASING.md](RELEASING.md) for packaging and publication.
 
-## TODO: GitHub and public npm release
+## Release status
 
 - [x] Fix audit parsing, ignore handling, interactive policy saves, and month-end expiry.
 - [x] Update development dependencies and verify a clean root dependency audit.
@@ -248,7 +248,8 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for change validation and [RELEASING.md](
 - [x] Add the MIT License before the first public release.
 - [x] Create the GitHub repository and push the initial source snapshot.
 - [x] Run the GitHub CI matrix successfully, including Linux package checks.
-- [ ] Configure npm ownership and trusted publishing, then publish the reviewed version.
-- [ ] Verify installation from the public registry and update the installation instructions to the final package identity.
+- [x] Publish `npm-audit-keeper@1.0.0` and tag the reviewed GitHub commit.
+- [x] Verify both CLI aliases after installation from the public registry.
+- [ ] Configure npm trusted publishing for staged future releases.
 
 See [RELEASING.md](RELEASING.md) for the release procedure.
