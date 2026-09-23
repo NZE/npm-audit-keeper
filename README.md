@@ -235,21 +235,3 @@ The GitHub CI workflow runs these checks on Windows and Linux with Node 22.12 an
 `npm run demo` launches the PowerShell interactive demo. Its dependencies are intentionally vulnerable and are isolated under `examples/vulnerable-app`; the root audit does not audit that separate lockfile.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for change validation and [RELEASING.md](RELEASING.md) for packaging and publication.
-
-## Release status
-
-- [x] Fix audit parsing, ignore handling, interactive policy saves, and month-end expiry.
-- [x] Update development dependencies and verify a clean root dependency audit.
-- [x] Add help/version commands, regression tests, and tarball installation checks.
-- [x] Add GitHub CI configuration for Windows/Linux and Node 22.12/24.
-- [x] Document the consumer setup and local review workflow.
-- [x] Choose the npm package name and prepare a GitHub source tree with independent history.
-- [x] Add repository, homepage, and issue tracker metadata.
-- [x] Add the MIT License before the first public release.
-- [x] Create the GitHub repository and push the initial source snapshot.
-- [x] Run the GitHub CI matrix successfully, including Linux package checks.
-- [x] Publish `npm-audit-keeper@1.0.0` and tag the reviewed GitHub commit.
-- [x] Verify both CLI aliases after installation from the public registry.
-- [x] Configure npm trusted publishing for staged future releases.
-
-See [RELEASING.md](RELEASING.md) for the release procedure.
