@@ -250,6 +250,6 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for change validation and [RELEASING.md](
 - [x] Run the GitHub CI matrix successfully, including Linux package checks.
 - [x] Publish `npm-audit-keeper@1.0.0` and tag the reviewed GitHub commit.
 - [x] Verify both CLI aliases after installation from the public registry.
-- [ ] Configure npm trusted publishing for staged future releases.
+- [x] Configure npm trusted publishing for staged future releases.
 
 See [RELEASING.md](RELEASING.md) for the release procedure.
