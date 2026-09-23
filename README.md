@@ -245,7 +245,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for change validation and [RELEASING.md](
 - [x] Add repository, homepage, and issue tracker metadata.
 - [ ] Choose and add a license before the first public release.
 - [x] Create the GitHub repository and push the initial source snapshot.
-- [ ] Run the GitHub CI matrix successfully, including Linux package checks.
+- [x] Run the GitHub CI matrix successfully, including Linux package checks.
 - [ ] Configure npm ownership and trusted publishing, then publish the reviewed version.
 - [ ] Verify installation from the public registry and update the installation instructions to the final package identity.
 
