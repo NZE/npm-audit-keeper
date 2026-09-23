@@ -1,6 +1,7 @@
 {
   "name": "npm-audit-keeper",
   "version": "1.0.0",
+  "license": "MIT",
   "engines": {
     "node": ">=22.12.0"
   },
@@ -11,6 +12,9 @@
   },
   "homepage": "https://github.com/NZE/npm-audit-keeper#readme",
   "bugs": "https://github.com/NZE/npm-audit-keeper/issues",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "bin": {
     "audit-check": "dist/index.js",
     "audit-keeper": "dist/index.js"

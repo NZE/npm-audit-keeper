@@ -1,11 +1,12 @@
-# Release preparation
+# Releasing
 
-## Before the first public release
+## First public release
 
-- Confirm the GitHub repository owner and public visibility.
-- Confirm the starting public version. The package currently identifies as `npm-audit-keeper@1.0.0` and requires Node 22.12 or newer.
-- Add the approved `LICENSE` and matching `license` field in `package.json`.
-- Review the source tree before making the GitHub repository public.
+- Review the source tree, then make the GitHub repository public. The package is MIT-licensed and its first public version is `npm-audit-keeper@1.0.0`.
+- Confirm the package name is available on npm and sign in to an npm account with two-factor authentication.
+- Run the checks below on a clean `main` commit and confirm the GitHub CI matrix passed for that commit.
+- Publish the first version interactively with `npm publish --registry=https://registry.npmjs.org/`. A new package cannot be staged or configured with a trusted publisher until it exists on npm.
+- Verify the published package metadata and install both CLI aliases from the public registry. Tag the published commit as `v1.0.0` and create the matching GitHub Release.
 
 ## Verify the package
 
@@ -23,12 +24,12 @@ The package smoke test installs the tarball offline without lifecycle scripts. I
 
 The GitHub CI matrix must pass before release. Local Windows checks do not substitute for the Linux jobs.
 
-## npm publication
+## Later releases
 
-Publication is not triggered by the CI workflow. Complete the package identity and license decisions before enabling publishing.
+After the first version exists, configure npm trusted publishing for GitHub user `NZE`, repository `npm-audit-keeper`, and workflow file `publish.yml`. Allow staged publishing only. The workflow runs on a version tag, validates that the tag matches `package.json` and points into `main`, repeats the checks above, then stages the package using GitHub Actions OIDC. No npm publish token is stored in GitHub.
 
-Use the public npm registry explicitly when publishing. See [npm's package publication guide](https://docs.npmjs.com/creating-and-publishing-unscoped-public-packages/).
+For each release, commit a version bump to `main` with its lockfile, wait for CI, then tag that exact commit as `v<version>` and push the tag. Review the staged package on npm and approve it with two-factor authentication. Create the GitHub Release after npm confirms publication. A package version cannot be reused once published.
 
-Prefer [npm trusted publishing](https://docs.npmjs.com/trusted-publishers/) from a dedicated GitHub Actions workflow on a GitHub-hosted runner. Configure npm with the exact repository, workflow filename, and optional protected environment. Use Node 24, a current npm CLI, `contents: read`, and `id-token: write`. Trusted publishing provides short-lived credentials and provenance for eligible public repositories.
+Trusted publishing requires a GitHub-hosted runner, Node 22.14 or newer, npm 11.5.1 or newer, and `id-token: write` permission. Staged publishing requires npm 11.15.0 or newer. Publishing from the public GitHub repository generates npm provenance automatically for later versions.
 
-For a new package, establish the package and publisher configuration through the supported npm account flow first. Confirm that the release tag matches `package.json`, verify the packed artifact, and publish only the reviewed version. Check the public registry metadata and install both CLI aliases from the published package afterward.
+See [npm's unscoped package guide](https://docs.npmjs.com/creating-and-publishing-unscoped-public-packages/), [trusted publishing](https://docs.npmjs.com/trusted-publishers/), and [staged publishing](https://docs.npmjs.com/staged-publishing/).

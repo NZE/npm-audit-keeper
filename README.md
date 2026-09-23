@@ -2,6 +2,8 @@
 
 A small npm audit gate for CI, with GHSA-based ignores, documented reasons, and expiry dates. Zero runtime dependencies.
 
+Licensed under the [MIT License](LICENSE).
+
 The CLI runs `npm audit --json` in your current directory, reports advisories at or above your severity threshold, and fails if any remain unresolved or any active ignore has expired. It does not change dependencies or run `npm audit fix`.
 
 ## Requirements and installation
@@ -243,7 +245,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for change validation and [RELEASING.md](
 - [x] Document the consumer setup and local review workflow.
 - [x] Choose the npm package name and prepare a GitHub source tree with independent history.
 - [x] Add repository, homepage, and issue tracker metadata.
-- [ ] Choose and add a license before the first public release.
+- [x] Add the MIT License before the first public release.
 - [x] Create the GitHub repository and push the initial source snapshot.
 - [x] Run the GitHub CI matrix successfully, including Linux package checks.
 - [ ] Configure npm ownership and trusted publishing, then publish the reviewed version.
